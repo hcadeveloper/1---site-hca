@@ -113,10 +113,10 @@ else{
     sscaoCookies.classList.add('mostrar')
 }
 
-// JS PARA ACTUALIZAR A O ANO DO RODAPÉ
-função updateYearOnFooter() {
-    const currentDate = nova Data();
+// JS PARA ATUALIZAR O ANO DO RODAPÉ
+function updateYearOnFooter() {
+    const currentDate = new Date();
     const currentYear = currentDate.getFullYear();
-    documento.getElementById('rodapé-ano-atual').innerHTML = currentYear    
+    document.getElementById('rodapé-ano-atual').innerHTML = currentYear;    
 }
-updateYearOnFooter()
+updateYearOnFooter();
