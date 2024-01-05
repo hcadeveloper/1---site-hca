@@ -127,9 +127,13 @@ function addYearBeforeH() {
     // Obtém o texto atual do parágrafo
     const paragraphText = yearElement.parentElement.textContent;
 
-    // Adiciona o ano atual antes do "H"
-    //yearElement.parentElement.innerHTML = `© ${currentYear} ${paragraphText}`;
+    // Verifica se o ano já foi adicionado anteriormente
+    if (!paragraphText.includes(`© ${currentYear}`)) {
+        // Adiciona o ano atual antes do "H" apenas se ainda não estiver presente
+        yearElement.parentElement.innerHTML = `© ${currentYear} ${paragraphText}`;
+    }
 }
 
 // Chama a função para executar a adição do ano antes do "H"
 addYearBeforeH();
+
