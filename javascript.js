@@ -112,3 +112,11 @@ if(localStorage.SalvarCookies == 'Cookies-Salvo'){
 else{
     sscaoCookies.classList.add('mostrar')
 }
+
+ JS PARA ACTUALIZAR A O ANO DO RODAPÉ
+função updateYearOnFooter() {
+    const currentDate = nova Data();
+    const currentYear = currentDate.getFullYear();
+    documento.getElementById('rodapé-ano-atual').innerHTML = currentYear    
+}
+updateYearOnFooter()
