@@ -127,6 +127,4 @@ function updateYearOnFooter() {
         yearElement.innerHTML = `${currentYear} ${yearElement.innerHTML}`;
     }
 }
-
-// Chama a função para executar a adição do ano antes do "H"
 updateYearOnFooter();
