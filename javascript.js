@@ -124,13 +124,11 @@ function updateYearOnFooter() {
     // Atualiza o conteúdo do elemento com o ano atual
     yearElement.innerHTML = currentYear;
 
-    // Obtém o elemento pai do span (o elemento <p>)
-    const paragraphElement = yearElement.parentElement;
+    // Obtém o texto atual do parágrafo
+    const paragraphText = yearElement.parentElement.textContent;
 
     // Adiciona o ano atual antes do "H"
-    paragraphElement.innerHTML = `© ${currentYear} ${paragraphElement.innerHTML}`;
+    yearElement.parentElement.innerHTML = `© ${currentYear} ${paragraphText}`;
 }
-
-// Chama a função para executar a adição do ano antes do "H"
 updateYearOnFooter();
 
