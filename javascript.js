@@ -121,19 +121,12 @@ function addYearBeforeH() {
     // Obtém o elemento com o ID 'footer-current-year'
     const yearElement = document.getElementById('footer-current-year');
     
-    // Atualiza o conteúdo do elemento com o ano atual
-    yearElement.innerHTML = currentYear;
-
-    // Obtém o texto atual do parágrafo
-    const paragraphText = yearElement.parentElement.textContent;
-
     // Verifica se o ano já foi adicionado anteriormente
-    if (!paragraphText.includes(`© ${currentYear}`)) {
+    if (!yearElement.textContent.includes(currentYear)) {
         // Adiciona o ano atual antes do "H" apenas se ainda não estiver presente
-        yearElement.parentElement.innerHTML = `© ${currentYear} ${paragraphText}`;
+        yearElement.innerHTML = `${currentYear} ${yearElement.innerHTML}`;
     }
 }
 
 // Chama a função para executar a adição do ano antes do "H"
 addYearBeforeH();
-
