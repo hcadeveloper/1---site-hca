@@ -114,7 +114,7 @@ else{
 }
 
 // JS PARA ATUALIZAR O ANO DO RODAPÉ
-function addYearBeforeH() {
+function updateYearOnFooter() {
     const currentDate = new Date();
     const currentYear = currentDate.getFullYear();
     
@@ -129,4 +129,4 @@ function addYearBeforeH() {
 }
 
 // Chama a função para executar a adição do ano antes do "H"
-addYearBeforeH();
+updateYearOnFooter();
