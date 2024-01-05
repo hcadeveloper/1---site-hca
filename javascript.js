@@ -117,6 +117,20 @@ else{
 function updateYearOnFooter() {
     const currentDate = new Date();
     const currentYear = currentDate.getFullYear();
-    document.getElementById('rodapé-ano-atual').innerHTML = currentYear;    
+    
+    // Obtém o elemento com o ID 'footer-current-year'
+    const yearElement = document.getElementById('footer-current-year');
+    
+    // Atualiza o conteúdo do elemento com o ano atual
+    yearElement.innerHTML = currentYear;
+
+    // Obtém o elemento pai do span (o elemento <p>)
+    const paragraphElement = yearElement.parentElement;
+
+    // Adiciona o ano atual antes do "H"
+    paragraphElement.innerHTML = `© ${currentYear} ${paragraphElement.innerHTML}`;
 }
+
+// Chama a função para executar a adição do ano antes do "H"
 updateYearOnFooter();
+
